@@ -1,0 +1,229 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* 해더 영역 */
+
+header {
+    background-color: rgb(95, 111, 204);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 150px;
+}
+
+header > .logo > img {
+    width: 130px;
+    height: 130px;
+    margin-left: 50px;
+}
+
+.main-menu {
+    display: flex;
+}
+
+.main-menu li {
+    list-style: none;
+    padding-left: 20px;
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.login {
+    margin-right: 50px;
+}
+
+/* 슬라이드 영역 */
+
+.slide-box {
+    width: 1400px;
+    height: 600px;
+    margin-left: 100px;
+    margin-top: 100px;
+    overflow: hidden;
+    position: relative;
+}
+
+.slide-img {
+    position: absolute;
+    display: flex;
+
+}
+
+.slide-img > img {
+    width: 1400px;
+    height: 600px;
+    animation:slide 15s infinite alternate ;
+
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0%);
+    }
+    25% {
+        transform: translateX(-100%);
+    }
+    50% {
+        transform: translateX(-200%);
+    }
+    75% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+/* 온라인 집들이 영역 */
+
+.housewarming {
+    margin-top: 100px;
+    width: 100%;
+    height: 600px;
+    background-color: rgb(219, 231, 231);
+    display: flex;
+}
+
+.housewarming-box {
+    width: 325px;
+    height: 525px;
+    background-color: #f2f2f2;
+    margin-top: 50px;
+    margin-left: 35px;
+    position: relative;
+    left: 65px;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.housewarming-img {
+    margin-left: 50px;
+    
+}
+
+.housewarming-img > img {
+    width: 315px;
+    height: 320px;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    border-radius: 5px 5px 0px 0px;
+    transition: all.5s;
+
+}
+
+.housewarming-img > img:nth-child(2) {
+    left: 325px;
+}
+.housewarming-img:hover > img:nth-child(2) {
+    transform: translateX(-102%);
+}
+
+.housewarming-text {
+    margin-top: 350px;
+}
+
+.housewarming-text > h1:nth-child(1) {
+    margin-left: 10px;
+}
+
+.housewarming-text > h1:nth-child(2) {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.housewarming button {
+    width: 60px;
+    height: 25px;
+    margin-left: 250px;
+    margin-top: 50px;
+    background-color: rgb(171, 171, 230);
+}
+
+/* 전문가 영역 */
+
+.specialist {
+    margin-top: 150px;
+    display: flex;
+}
+
+
+.specialist-text > h1 {
+}
+
+.item {
+    margin-left: 35px;
+    left: 65px;
+    backface-visibility: hidden;
+    transition: all;
+    position: relative;
+}
+.front > img {
+    width: 325px;
+    height: 525px;
+    border-radius: 5px;
+    
+}
+
+
+.item > img {
+    transform: rotateY(0deg);
+}
+
+.item:hover > img {
+    transform: rotateY(-180deg);
+}
+
+.item > .back {
+    transform: rotateY(-180deg);
+}
+
+.item:hover > .back {
+    transform: rotateY(0deg);
+}
+
+/* 전문가 시공 후기 영역 */
+
+.review {
+    margin-top: 150px;
+    background-color: rgb(219, 231, 231);
+    display: flex;
+    width: 100%;
+    height: 615px;
+    border-radius: 5px;
+}
+
+.review-box {
+    margin-left: 225px;
+    margin-top: 50px;
+    background-color: #f2f2f2;
+    height: 525px;
+
+}
+
+.review-box > h1 {
+    font-size: 20px;
+}
+
+.review-img > img {
+    height: 300px;
+    width: 470px;
+    border-radius: 5px 5px 0px 0px;
+}
+
+/* 푸터 영역 */
+
+.footer {
+    background-color: rgb(174, 174, 248);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+.footer > h1 {
+    font-size: 23px;
+}
